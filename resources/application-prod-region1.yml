@@ -1,0 +1,17 @@
+sample:
+ app-name: Sample Application 
+ version: 2.0
+ lob: sales
+ secrets:
+   db_user_name: ${db_user_name}
+   db_user_password: ${db_user_password}
+   api_user_id: ${api_user_id}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude:
+        - shutdown

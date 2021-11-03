@@ -1,0 +1,43 @@
+
+# kubectl config get-contexts
+# kubectl create deployment hr-app-deployment2 --image vimalrkp/hr-app:V2
+# kubectl get deployments
+# kubectl describe deployment hr-app-deployment
+# kubectl expose deployment/hr-app-deployment2 --port 8082 --target-port 9003 --type "NodePort"
+# kubectl describe services/hr-app-deployment2
+# kubectl describe nodes
+# kubectl get nodes
+# kubectl delete service hr-app-deployment2
+# kubectl expose deployment/hr-app-deployment2 --port 8082 --type "NodePort"
+# kubectl get pods
+# kubectl get services
+# kubectl describe nodes docker-desktop
+# kubectl get nodes -o wide
+# kubectl describe services/hr-app-deployment2
+# kubectl get rs
+# kubectl scale deployments/hr-app-deployment2 --replicas=4
+# kubectl scale deployments/hr-app-deployment2 --replicas=2
+# kubectl describe pods
+# kubectl describe pods hr-app-deployment2-56dd99c9f7-j5n5h
+# kubectl logs -f deployment/redis-leader
+
+# kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
+# kubectl rollout undo deployments/kubernetes-bootcamp deployment.apps/kubernetes-bootcamp rolled back
+
+# kubectl delete deployment -l app=redis
+# kubectl delete service -l app=redis
+# kubectl delete deployment frontend
+# kubectl delete service frontend
+# kubectl delete service kube-config-poc-service
+
+# kubectl apply -f kube_config_kubernetes.yaml
+# kubectl create configmap application-prod-region1 --from-file=D:\sts-ws\docker\spring-boot-kube-config-poc\resources\application-prod-region1.yml
+# kubectl create configmap application-prod-region1 --from-file=D:\sts-ws\docker\spring-boot-kube-config-poc\resources\application-prod-region1.yml --dry-run -o yaml \
+    | kubectl apply -f -
+# kubectl describe configmaps application-prod-region1
+# kubectl get configmap application-prod-region1 -o yaml
+# kubectl delete configmap application-prod-region1
+# kubectl delete secret kube-config-secret
+
+# kubectl apply -f ./resources/secret1.yml
+# kubectl get secret kube-config-secret -o yaml

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+{{ (.Files.Glob "resources/application-prod-region1.yml").AsConfig | indent 2 }}
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Release.Name }}-secret
+type: Opaque
+data:
+  db_user_name: YWRtaW4=
+  db_user_password: MWYyZDFlMmU2N2Rm
+stringData:
+  api_user_id: test01
+ 

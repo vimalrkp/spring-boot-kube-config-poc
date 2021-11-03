@@ -1,0 +1,11 @@
+helm create spring-boot-kube-config-poc
+
+helm install sb-kube-config-poc-rel1 ./spring-boot-kube-config-poc
+helm install --debug --dry-run sb-kube-config-poc-rel1 ./spring-boot-kube-config-poc
+
+helm uninstall sb-kube-config-poc-rel1
+
+helm get manifest sb-kube-config-poc-rel1
+
+rm -rf mychart/templates/*.*
+
